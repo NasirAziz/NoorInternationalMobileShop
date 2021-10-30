@@ -67,7 +67,7 @@ namespace BaarDanaTraderPOS
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(75, 343);
+            this.button1.Location = new System.Drawing.Point(25, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(200, 51);
             this.button1.TabIndex = 0;
@@ -82,7 +82,7 @@ namespace BaarDanaTraderPOS
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.DimGray;
-            this.button2.Location = new System.Drawing.Point(50, 260);
+            this.button2.Location = new System.Drawing.Point(25, 180);
             this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(200, 49);
@@ -98,7 +98,7 @@ namespace BaarDanaTraderPOS
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DimGray;
-            this.button3.Location = new System.Drawing.Point(50, 296);
+            this.button3.Location = new System.Drawing.Point(25, 250);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(200, 42);
@@ -114,7 +114,7 @@ namespace BaarDanaTraderPOS
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(50, 363);
+            this.button4.Location = new System.Drawing.Point(25, 455);
             this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(200, 48);
@@ -152,7 +152,7 @@ namespace BaarDanaTraderPOS
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.DimGray;
-            this.btnUsers.Location = new System.Drawing.Point(52, 544);
+            this.btnUsers.Location = new System.Drawing.Point(25, 719);
             this.btnUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(200, 47);
@@ -168,7 +168,7 @@ namespace BaarDanaTraderPOS
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button6.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(50, 398);
+            this.button6.Location = new System.Drawing.Point(25, 518);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(200, 51);
@@ -184,7 +184,7 @@ namespace BaarDanaTraderPOS
             this.btnCash.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCash.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCash.ForeColor = System.Drawing.Color.DimGray;
-            this.btnCash.Location = new System.Drawing.Point(50, 327);
+            this.btnCash.Location = new System.Drawing.Point(25, 310);
             this.btnCash.Margin = new System.Windows.Forms.Padding(2);
             this.btnCash.Name = "btnCash";
             this.btnCash.Size = new System.Drawing.Size(200, 49);
@@ -200,7 +200,7 @@ namespace BaarDanaTraderPOS
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(50, 435);
+            this.button5.Location = new System.Drawing.Point(25, 584);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(200, 48);
@@ -216,7 +216,7 @@ namespace BaarDanaTraderPOS
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSettings.Location = new System.Drawing.Point(50, 470);
+            this.btnSettings.Location = new System.Drawing.Point(25, 652);
             this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(200, 47);
@@ -244,7 +244,7 @@ namespace BaarDanaTraderPOS
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.lblTotalSales);
-            this.panel2.Location = new System.Drawing.Point(555, 478);
+            this.panel2.Location = new System.Drawing.Point(401, 168);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(311, 122);

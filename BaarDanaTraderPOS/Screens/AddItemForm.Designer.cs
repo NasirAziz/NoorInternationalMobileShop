@@ -54,6 +54,8 @@ namespace BaarDanaTraderPOS.Screens
             this.label3 = new System.Windows.Forms.Label();
             this.tbPurchasePrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DateOfExpiry = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,11 +212,23 @@ namespace BaarDanaTraderPOS.Screens
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
+            // label7
+            // 
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
+            // 
+            // DateOfExpiry
+            // 
+            resources.ApplyResources(this.DateOfExpiry, "DateOfExpiry");
+            this.DateOfExpiry.Name = "DateOfExpiry";
+            // 
             // AddItemForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.DateOfExpiry);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPurchasePrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -273,5 +287,7 @@ namespace BaarDanaTraderPOS.Screens
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbPurchasePrice;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker DateOfExpiry;
     }
 }

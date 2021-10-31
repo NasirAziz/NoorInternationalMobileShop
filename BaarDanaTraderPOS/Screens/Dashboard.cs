@@ -25,17 +25,16 @@ namespace BaarDanaTraderPOS
 
         private void Form1_Load(object sender, EventArgs e)
         {
-             con.ConnectionString = Connection.c;
-            con.Open();
-/*            try
+            con.ConnectionString = Connection.c;
+            try
             {
                 con.Open();
             }
             catch
             {
                 MessageBox.Show("Error! Database not found.");
-            }*/
-            
+            }
+
         }
 
         private void btnCreateOrder(object sender, EventArgs e)
@@ -138,6 +137,12 @@ namespace BaarDanaTraderPOS
         {
             Users user = new Users();
             user.Show();
+        }
+
+        private void btnSuppliers_Click(object sender, EventArgs e)
+        {
+            SuppliersForm supplier = new SuppliersForm();
+            supplier.Show();
         }
 
         public void ProfitFromSales()

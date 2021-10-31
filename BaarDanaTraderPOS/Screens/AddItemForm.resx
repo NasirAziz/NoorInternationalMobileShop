@@ -126,14 +126,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 94</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 145</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>59, 20</value>
+    <value>90, 29</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -160,13 +156,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 181</value>
-  </data>
-  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 278</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>92, 20</value>
+    <value>138, 29</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -193,13 +186,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 227</value>
-  </data>
-  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 349</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 20</value>
+    <value>118, 29</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -223,13 +213,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="tbItemName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 92</value>
-  </data>
-  <data name="tbItemName.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>212, 142</value>
   </data>
   <data name="tbItemName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
+    <value>210, 35</value>
   </data>
   <data name="tbItemName.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
@@ -250,13 +237,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="tbItemPrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 179</value>
-  </data>
-  <data name="tbItemPrice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>212, 275</value>
   </data>
   <data name="tbItemPrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
+    <value>210, 35</value>
   </data>
   <data name="tbItemPrice.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -277,13 +261,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="tbItemQuantity.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 224</value>
-  </data>
-  <data name="tbItemQuantity.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>212, 345</value>
   </data>
   <data name="tbItemQuantity.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
+    <value>210, 35</value>
   </data>
   <data name="tbItemQuantity.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -300,6 +281,7 @@
   <data name="&gt;&gt;tbItemQuantity.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnItemAdd.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
@@ -307,13 +289,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="btnItemAdd.Location" type="System.Drawing.Point, System.Drawing">
-    <value>176, 416</value>
+    <value>264, 640</value>
   </data>
   <data name="btnItemAdd.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnItemAdd.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 45</value>
+    <value>110, 69</value>
   </data>
   <data name="btnItemAdd.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -340,13 +322,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="btnItemCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 416</value>
+    <value>20, 640</value>
   </data>
   <data name="btnItemCancel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnItemCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 45</value>
+    <value>110, 69</value>
   </data>
   <data name="btnItemCancel.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -373,13 +355,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="btnItemUpdate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>94, 416</value>
+    <value>141, 640</value>
   </data>
   <data name="btnItemUpdate.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnItemUpdate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 45</value>
+    <value>110, 69</value>
   </data>
   <data name="btnItemUpdate.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -406,13 +388,13 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="btnItemDelete.Location" type="System.Drawing.Point, System.Drawing">
-    <value>257, 416</value>
+    <value>386, 640</value>
   </data>
   <data name="btnItemDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>6, 6, 6, 6</value>
   </data>
   <data name="btnItemDelete.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 45</value>
+    <value>110, 69</value>
   </data>
   <data name="btnItemDelete.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -436,16 +418,13 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="dgvItems.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 79</value>
-  </data>
-  <data name="dgvItems.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>504, 122</value>
   </data>
   <data name="dgvItems.RowHeadersWidth" type="System.Int32, mscorlib">
     <value>62</value>
   </data>
   <data name="dgvItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>620, 363</value>
+    <value>936, 558</value>
   </data>
   <data name="dgvItems.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -469,13 +448,10 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="tbAISearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>440, 41</value>
-  </data>
-  <data name="tbAISearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>660, 63</value>
   </data>
   <data name="tbAISearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 23</value>
+    <value>572, 30</value>
   </data>
   <data name="tbAISearch.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -502,13 +478,10 @@
     <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>327, 43</value>
-  </data>
-  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>490, 66</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 17</value>
+    <value>164, 25</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -535,13 +508,10 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btnAISearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>822, 41</value>
-  </data>
-  <data name="btnAISearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1239, 63</value>
   </data>
   <data name="btnAISearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 23</value>
+    <value>90, 35</value>
   </data>
   <data name="btnAISearch.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -568,13 +538,10 @@
     <value>Microsoft Sans Serif, 9pt</value>
   </data>
   <data name="btnShowAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>886, 41</value>
-  </data>
-  <data name="btnShowAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1335, 63</value>
   </data>
   <data name="btnShowAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 23</value>
+    <value>105, 35</value>
   </data>
   <data name="btnShowAll.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -598,13 +565,10 @@
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="tbBarCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 314</value>
-  </data>
-  <data name="tbBarCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>212, 483</value>
   </data>
   <data name="tbBarCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 26</value>
+    <value>204, 35</value>
   </data>
   <data name="tbBarCode.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -631,13 +595,10 @@
     <value>NoControl</value>
   </data>
   <data name="b.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 318</value>
-  </data>
-  <data name="b.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 489</value>
   </data>
   <data name="b.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 20</value>
+    <value>109, 29</value>
   </data>
   <data name="b.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
@@ -667,13 +628,10 @@
     <value>NoControl</value>
   </data>
   <data name="Company.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 270</value>
-  </data>
-  <data name="Company.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 415</value>
   </data>
   <data name="Company.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 20</value>
+    <value>115, 29</value>
   </data>
   <data name="Company.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
@@ -694,10 +652,13 @@
     <value>6</value>
   </data>
   <data name="cbCompany.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 269</value>
+    <value>212, 414</value>
+  </data>
+  <data name="cbCompany.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="cbCompany.Size" type="System.Drawing.Size, System.Drawing">
-    <value>137, 21</value>
+    <value>204, 28</value>
   </data>
   <data name="cbCompany.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -715,10 +676,13 @@
     <value>5</value>
   </data>
   <data name="btnAddCompany.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 265</value>
+    <value>434, 408</value>
+  </data>
+  <data name="btnAddCompany.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="btnAddCompany.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 23</value>
+    <value>62, 35</value>
   </data>
   <data name="btnAddCompany.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
@@ -738,71 +702,14 @@
   <data name="&gt;&gt;btnAddCompany.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="btnGenerateBarCode.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnGenerateBarCode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>269, 381</value>
-  </data>
-  <data name="btnGenerateBarCode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 13</value>
-  </data>
-  <data name="btnGenerateBarCode.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="btnGenerateBarCode.Text" xml:space="preserve">
-    <value>Click Here</value>
-  </data>
-  <data name="&gt;&gt;btnGenerateBarCode.Name" xml:space="preserve">
-    <value>btnGenerateBarCode</value>
-  </data>
-  <data name="&gt;&gt;btnGenerateBarCode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnGenerateBarCode.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnGenerateBarCode.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>29, 381</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>234, 13</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>If You Dont Have BarCode Then Generate New</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <data name="tbPurchasePrice.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="tbPurchasePrice.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 134</value>
-  </data>
-  <data name="tbPurchasePrice.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>212, 206</value>
   </data>
   <data name="tbPurchasePrice.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 26</value>
+    <value>210, 35</value>
   </data>
   <data name="tbPurchasePrice.TabIndex" type="System.Int32, mscorlib">
     <value>28</value>
@@ -829,13 +736,10 @@
     <value>NoControl</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>20, 136</value>
-  </data>
-  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>30, 209</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>118, 20</value>
+    <value>177, 29</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -855,17 +759,83 @@
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="btnGenerateBarCode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnGenerateBarCode.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnGenerateBarCode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>404, 586</value>
+  </data>
+  <data name="btnGenerateBarCode.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="btnGenerateBarCode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 20</value>
+  </data>
+  <data name="btnGenerateBarCode.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnGenerateBarCode.Text" xml:space="preserve">
+    <value>Click Here</value>
+  </data>
+  <data name="&gt;&gt;btnGenerateBarCode.Name" xml:space="preserve">
+    <value>btnGenerateBarCode</value>
+  </data>
+  <data name="&gt;&gt;btnGenerateBarCode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.LinkLabel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGenerateBarCode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGenerateBarCode.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>44, 586</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>346, 20</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>If You Dont Have BarCode Then Generate New</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>9, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>959, 482</value>
+    <value>1444, 742</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>AddItemForm</value>

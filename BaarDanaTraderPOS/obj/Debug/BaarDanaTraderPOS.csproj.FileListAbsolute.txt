@@ -342,3 +342,4 @@ C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\BaarDanaTraderPOS.exe
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\BaarDanaTraderPOS.pdb
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\ur-PK\BaarDanaTraderPOS.resources.dll
+C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.Screens.SuppliersForm.resources

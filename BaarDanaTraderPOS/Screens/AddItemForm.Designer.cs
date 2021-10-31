@@ -52,6 +52,8 @@ namespace BaarDanaTraderPOS.Screens
             this.btnAddCompany = new System.Windows.Forms.Button();
             this.tbPurchasePrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DateOfExpiry = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -197,26 +199,15 @@ namespace BaarDanaTraderPOS.Screens
             resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
-            // btnGenerateBarCode
+            // label7
             // 
-            resources.ApplyResources(this.btnGenerateBarCode, "btnGenerateBarCode");
-            this.btnGenerateBarCode.Name = "btnGenerateBarCode";
-            this.btnGenerateBarCode.TabStop = true;
+            resources.ApplyResources(this.label7, "label7");
+            this.label7.Name = "label7";
             // 
-            // label3
+            // DateOfExpiry
             // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // tbPurchasePrice
-            // 
-            resources.ApplyResources(this.tbPurchasePrice, "tbPurchasePrice");
-            this.tbPurchasePrice.Name = "tbPurchasePrice";
-            // 
-            // label6
-            // 
-            resources.ApplyResources(this.label6, "label6");
-            this.label6.Name = "label6";
+            resources.ApplyResources(this.DateOfExpiry, "DateOfExpiry");
+            this.DateOfExpiry.Name = "DateOfExpiry";
             // 
             // AddItemForm
             // 
@@ -227,8 +218,6 @@ namespace BaarDanaTraderPOS.Screens
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPurchasePrice);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnGenerateBarCode);
             this.Controls.Add(this.btnAddCompany);
             this.Controls.Add(this.cbCompany);
             this.Controls.Add(this.Company);
@@ -281,9 +270,7 @@ namespace BaarDanaTraderPOS.Screens
         private System.Windows.Forms.Button btnAddCompany;
         private System.Windows.Forms.TextBox tbPurchasePrice;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel btnGenerateBarCode;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox tbPurchasePrice;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker DateOfExpiry;
     }
 }

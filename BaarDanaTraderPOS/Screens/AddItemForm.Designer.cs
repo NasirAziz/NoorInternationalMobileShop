@@ -52,8 +52,6 @@ namespace BaarDanaTraderPOS.Screens
             this.btnAddCompany = new System.Windows.Forms.Button();
             this.tbPurchasePrice = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnGenerateBarCode = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -210,11 +208,23 @@ namespace BaarDanaTraderPOS.Screens
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
             // 
+            // tbPurchasePrice
+            // 
+            resources.ApplyResources(this.tbPurchasePrice, "tbPurchasePrice");
+            this.tbPurchasePrice.Name = "tbPurchasePrice";
+            // 
+            // label6
+            // 
+            resources.ApplyResources(this.label6, "label6");
+            this.label6.Name = "label6";
+            // 
             // AddItemForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.DateOfExpiry);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPurchasePrice);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -273,5 +283,7 @@ namespace BaarDanaTraderPOS.Screens
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel btnGenerateBarCode;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbPurchasePrice;
+        private System.Windows.Forms.Label label6;
     }
 }

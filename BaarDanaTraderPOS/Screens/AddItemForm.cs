@@ -28,7 +28,7 @@ namespace BaarDanaTraderPOS.Screens
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
-                cmd.CommandText = "insert into Add_item values(@name,@price,@quantity,@barcode,@company,@purchase)";
+                cmd.CommandText = "insert into Add_item values(@name,@price,@quantity,@barcode,@company,@purchase,@DateOFExpiry)";
                 cmd.CommandType = CommandType.Text;
                 cmd.Parameters.AddWithValue("@name", tbItemName.Text);
                 cmd.Parameters.AddWithValue("@price", tbItemPrice.Text);
@@ -36,6 +36,7 @@ namespace BaarDanaTraderPOS.Screens
                 cmd.Parameters.AddWithValue("@barcode", tbBarCode.Text);
                 cmd.Parameters.AddWithValue("@company", cbCompany.GetItemText(cbCompany.SelectedItem));
                 cmd.Parameters.AddWithValue("@purchase", tbPurchasePrice.Text);
+                cmd.Parameters.AddWithValue("DateOfExpiry", DateOfExpiry.Value.Date);
 
                 try
                 {

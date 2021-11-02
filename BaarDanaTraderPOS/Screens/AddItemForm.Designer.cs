@@ -54,6 +54,11 @@ namespace BaarDanaTraderPOS.Screens
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.DateOfExpiry = new System.Windows.Forms.DateTimePicker();
+            this.cbSupplier = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnFinish = new System.Windows.Forms.Button();
+            this.lblTotalBill = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvItems)).BeginInit();
             this.SuspendLayout();
             // 
@@ -176,8 +181,8 @@ namespace BaarDanaTraderPOS.Screens
             // 
             // cbCompany
             // 
-            this.cbCompany.FormattingEnabled = true;
             resources.ApplyResources(this.cbCompany, "cbCompany");
+            this.cbCompany.FormattingEnabled = true;
             this.cbCompany.Name = "cbCompany";
             this.cbCompany.SelectedIndexChanged += new System.EventHandler(this.cbCompany_SelectedIndexChanged);
             this.cbCompany.Click += new System.EventHandler(this.cbCompany_Click);
@@ -207,13 +212,50 @@ namespace BaarDanaTraderPOS.Screens
             // DateOfExpiry
             // 
             resources.ApplyResources(this.DateOfExpiry, "DateOfExpiry");
+            this.DateOfExpiry.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.DateOfExpiry.Name = "DateOfExpiry";
+            // 
+            // cbSupplier
+            // 
+            resources.ApplyResources(this.cbSupplier, "cbSupplier");
+            this.cbSupplier.FormattingEnabled = true;
+            this.cbSupplier.Name = "cbSupplier";
+            this.cbSupplier.SelectedValueChanged += new System.EventHandler(this.cbSupplier_SelectedValueChanged);
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.BackColor = System.Drawing.Color.Blue;
+            resources.ApplyResources(this.btnFinish, "btnFinish");
+            this.btnFinish.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.UseVisualStyleBackColor = false;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
+            // 
+            // lblTotalBill
+            // 
+            resources.ApplyResources(this.lblTotalBill, "lblTotalBill");
+            this.lblTotalBill.Name = "lblTotalBill";
+            // 
+            // label8
+            // 
+            resources.ApplyResources(this.label8, "label8");
+            this.label8.Name = "label8";
             // 
             // AddItemForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblTotalBill);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.btnFinish);
+            this.Controls.Add(this.cbSupplier);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.DateOfExpiry);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbPurchasePrice);
@@ -272,5 +314,10 @@ namespace BaarDanaTraderPOS.Screens
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DateTimePicker DateOfExpiry;
+        private System.Windows.Forms.ComboBox cbSupplier;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnFinish;
+        private System.Windows.Forms.Label lblTotalBill;
+        private System.Windows.Forms.Label label8;
     }
 }

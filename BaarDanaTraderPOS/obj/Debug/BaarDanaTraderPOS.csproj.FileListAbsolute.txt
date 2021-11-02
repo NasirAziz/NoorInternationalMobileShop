@@ -367,9 +367,7 @@ C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\BaarDanaTraderPOS.exe
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\BaarDanaTraderPOS.pdb
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\ur-PK\BaarDanaTraderPOS.resources.dll
-<<<<<<< HEAD
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.Screens.SuppliersForm.resources
-=======
 >>>>>>> c002c0b788994708683f68466a9fb18dcea6f137
 C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
@@ -440,3 +438,4 @@ C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\De
 C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\ur-PK\BaarDanaTraderPOS.resources.dll
 C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.csproj.CopyComplete
 >>>>>>> ec686e44cf35bc2d02253da1eb4f742aa733cbf6
+C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.Screens.AddItemFinishForm.resources

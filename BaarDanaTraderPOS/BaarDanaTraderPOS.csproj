@@ -106,6 +106,12 @@
     <Compile Include="Screens\AddCustomerForm.Designer.cs">
       <DependentUpon>AddCustomerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\AddItemFinishForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AddItemFinishForm.Designer.cs">
+      <DependentUpon>AddItemFinishForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\AddItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +211,9 @@
       <DependentUpon>ViewHistoryReport.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Screens\AddItemFinishForm.resx">
+      <DependentUpon>AddItemFinishForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\AddItemForm.ur-PK.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -13,9 +13,18 @@ namespace BaarDanaTraderPOS.Screens
     public partial class AddItemForm : Form
     {
         DataTable Item = new DataTable();
+        DataTable dtSupplier = new DataTable();
+
+        String dateOfExpiry;
+        String supplier;
+
         SqlConnection con = new SqlConnection();
         public int id, price, purchase, quantity;
         public String name, company, barcode;
+        public static int totalBill, supplierID;
+
+        public static DataTable dtOrder;
+          
         public AddItemForm()
         {
             InitializeComponent();
@@ -25,8 +34,21 @@ namespace BaarDanaTraderPOS.Screens
         {
             if (tbItemName.Text.Length != 0 && tbItemPrice.Text.Length != 0 && tbItemQuantity.Text.Length != 0)
             {
+                dtOrder.Rows.Add(
+                    tbItemName.Text, 
+                    tbItemPrice.Text, 
+                    tbItemQuantity.Text, 
+                    tbBarCode.Text, 
+                    DateOfExpiry.Value.Date, 
+                    cbCompany.GetItemText(cbCompany.SelectedItem), 
+                    tbPurchasePrice.Text, 
+                    cbSupplier.GetItemText(cbSupplier.SelectedItem));
 
-                SqlCommand cmd = new SqlCommand();
+                dgvItems.DataSource = dtOrder;
+                CalculateTotalPrice();
+
+                
+               /* SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
                 cmd.CommandText = "insert into Add_item values(@name,@price,@quantity,@barcode,@company,@purchase,@DateOFExpiry)";
                 cmd.CommandType = CommandType.Text;
@@ -56,7 +78,7 @@ namespace BaarDanaTraderPOS.Screens
                 {
                     MessageBox.Show("Please add valid data!");
                 }
-                LoadItems();
+                LoadItems();*/
             }
             else
             {
@@ -102,15 +124,39 @@ namespace BaarDanaTraderPOS.Screens
 
         }
 
-
+        private void CalculateTotalPrice()
+        {
+          
+            totalBill = 0;
+            foreach (DataRow row in dtOrder.Rows)
+            {
+                int qty = int.Parse(row["Quantity"].ToString());
+                int purchase = int.Parse(row["Purchase_price"].ToString());
+                totalBill += qty * purchase;
+            }
+            lblTotalBill.Text = totalBill.ToString();
+           // FinalPrice = (grandTotal + Balance);
+            //lblFinal.Text = FinalPrice.ToString();
+        }
 
         private void AddItemForm_Load(object sender, EventArgs e)
         {
             con.ConnectionString = Connection.c;
             con.Open();
 
+            dtOrder = new DataTable();
+            dtOrder.Columns.Add("Name");
+            dtOrder.Columns.Add("Price", typeof(int));
+            dtOrder.Columns.Add("Quantity", typeof(int));
+            dtOrder.Columns.Add("BarCode");
+            dtOrder.Columns.Add("DateOfExpiry", typeof(DateTime));
+            dtOrder.Columns.Add("Company");
+            dtOrder.Columns.Add("Purchase_price", typeof(int));
+            dtOrder.Columns.Add("Supplier");
+
             LoadItems();
             LoadCompany();
+            LoadSupplier();
 
         }
 
@@ -163,7 +209,41 @@ namespace BaarDanaTraderPOS.Screens
             }
             catch (Exception)
             {
-                MessageBox.Show("");
+                MessageBox.Show("Error Loading Companies or No Companies to load");
+            }
+
+        }
+        public void LoadSupplier()
+        {
+            try
+            {
+               
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "Select * from Add_supplier";
+                cmd.CommandType = CommandType.Text;
+                SqlDataAdapter sda = new SqlDataAdapter(cmd);
+
+                sda.Fill(dtSupplier);
+                //dgvItems.DataSource = supplier;
+                //dgvItems.Refresh();
+                cmd.ExecuteNonQuery();
+
+                //Insert the Default Item to DataTable.
+                DataRow row = dtSupplier.NewRow();
+                row[0] = 0;
+                row[1] = "Default";
+                dtSupplier.Rows.InsertAt(row, 0);
+                cbSupplier.DataSource = dtSupplier;
+                cbSupplier.DisplayMember = "Name";
+                cbSupplier.ValueMember = "id";
+
+                
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Error Loading Suppliers");
             }
 
         }
@@ -193,6 +273,7 @@ namespace BaarDanaTraderPOS.Screens
             tbPurchasePrice.Text = "";
             tbBarCode.Text = "";
             cbCompany.SelectedIndex = 0;
+            
         }
 
         private void btnItemDelete_Click(object sender, EventArgs e)
@@ -209,7 +290,28 @@ namespace BaarDanaTraderPOS.Screens
         private void btnShowAll_Click(object sender, EventArgs e)
         {
             LoadItems();
+            Resettext();
             tbAISearch.Text = "";
+        }
+
+        private void btnFinish_Click(object sender, EventArgs e)
+        {
+            AddItemFinishForm f = new AddItemFinishForm();
+            f.Show();
+        }
+
+        private void cbSupplier_SelectedValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                supplierID = int.Parse(dtSupplier.Rows[cbSupplier.SelectedIndex]["Supplier_id"].ToString());
+                //MessageBox.Show(supplierID.ToString());
+            }
+            catch
+            {
+
+            }
+           
         }
 
         private void btnAddCompany_Click(object sender, EventArgs e)
@@ -265,8 +367,29 @@ namespace BaarDanaTraderPOS.Screens
             }
             catch
             {
-                MessageBox.Show("Error");
+               // id = Convert.ToInt32(dgvItems.CurrentRow.Cells[0].Value.ToString());
+                name = dgvItems.CurrentRow.Cells[0].Value.ToString();
+                price = Convert.ToInt32(dgvItems.CurrentRow.Cells[1].Value.ToString());
+
+                purchase = Convert.ToInt32(dgvItems.CurrentRow.Cells[6].Value.ToString());
+                quantity = Convert.ToInt32(dgvItems.CurrentRow.Cells[2].Value.ToString());
+                barcode = dgvItems.CurrentRow.Cells[3].Value.ToString();
+                dateOfExpiry =  dgvItems.CurrentRow.Cells[4].Value.ToString();
+                company = dgvItems.CurrentRow.Cells[5].Value.ToString();
+                supplier = dgvItems.CurrentRow.Cells[7].Value.ToString();
+
+                tbItemName.Text = name;
+                tbItemPrice.Text = price.ToString();
+                tbPurchasePrice.Text = purchase.ToString();
+                tbItemQuantity.Text = quantity.ToString();
+                tbBarCode.Text = barcode;
+                DateOfExpiry.Value = DateTime.Parse(dateOfExpiry);
+                cbCompany.SelectedIndex = cbCompany.Items.IndexOf(company);
             }
+/*            catch
+            {
+                MessageBox.Show("Error");
+            }*/
         }
     }
 }

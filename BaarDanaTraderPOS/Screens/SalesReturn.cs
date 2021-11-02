@@ -86,7 +86,7 @@ namespace BaarDanaTraderPOS.Screens
 
         public void QuantityBack(Double qty)
         {
-            MessageBox.Show(Product_id.ToString());
+           /* MessageBox.Show(Product_id.ToString());*/
             SqlCommand cmd = new SqlCommand
             {
                 Connection = con,

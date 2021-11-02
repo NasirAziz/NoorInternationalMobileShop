@@ -619,7 +619,6 @@ namespace BaarDanaTraderPOS.Screens
           Paid = int.Parse(tbPaidAmount.Text);
                // Balance = -Convert.ToInt32(tbPaidAmount.Text) + FinalPrice;
                 invoiceFlag = true;
-           // MessageBox.Show("thread will be created now");
 
             var thread = new Thread(()=> {
 

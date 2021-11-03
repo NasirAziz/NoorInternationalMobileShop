@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,6 +30,7 @@ namespace BaarDanaTraderPOS
             try
             {
                 con.Open();
+                notificationalert();
             }
             catch
             {
@@ -135,8 +137,8 @@ namespace BaarDanaTraderPOS
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            Users user = new Users();
-            user.Show();
+            CheckExpiry exp = new CheckExpiry();
+            exp.Show();
         }
 
         private void btnSuppliers_Click(object sender, EventArgs e)
@@ -198,5 +200,47 @@ namespace BaarDanaTraderPOS
             }
           
         }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        protected void Displaynotify()
+        {
+
+            alert.Icon = new Icon(Path.GetFullPath(@"images\alert.ico"));
+            alert.Text = "Click To Open Expiry Window";
+            alert.Visible = true;
+            alert.BalloonTipTitle = "Some Items will Expired After 14 Days";
+            alert.BalloonTipText = "Click Here to see details";
+            alert.ShowBalloonTip(100);
+
+
+        }
+        public void notificationalert()
+        {
+
+            DataTable dt = new DataTable();
+            DateTime dt1 = DateTime.Now;
+            DateTime todaydate = dt1.Date;
+            todaydate = todaydate.AddDays(14);
+            SqlCommand cmd = new SqlCommand();
+            cmd.Connection = con;
+            cmd.CommandText = "select * from Add_item where DateOfExpiry = @d";
+            cmd.Parameters.AddWithValue("@d", todaydate.Date.ToString("dd-MM-yyyy"));
+            cmd.ExecuteNonQuery();
+            int r = cmd.ExecuteNonQuery();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(dt);
+            dgvexpiry.DataSource = dt;
+
+            if (dt.Rows.Count > 0)
+            {
+                Displaynotify();
+
+            }
+        }
+
     }
 }

@@ -439,3 +439,4 @@ C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\De
 C:\Users\apple\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.csproj.CopyComplete
 >>>>>>> ec686e44cf35bc2d02253da1eb4f742aa733cbf6
 C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.Screens.AddItemFinishForm.resources
+C:\Users\Hp\Source\Repos\NoorInternationalMobileShop\BaarDanaTraderPOS\obj\Debug\BaarDanaTraderPOS.Screens.CheckExpiry.resources

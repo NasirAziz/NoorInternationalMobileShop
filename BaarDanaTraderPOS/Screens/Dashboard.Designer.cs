@@ -29,12 +29,14 @@ namespace BaarDanaTraderPOS
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSuppliers = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.btnCash = new System.Windows.Forms.Button();
@@ -52,12 +54,16 @@ namespace BaarDanaTraderPOS
             this.label5 = new System.Windows.Forms.Label();
             this.lblTotalProfit = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnSuppliers = new System.Windows.Forms.Button();
+            this.bookShopDataSet1 = new BaarDanaTraderPOS.BookShopDataSet();
+            this.alert = new System.Windows.Forms.NotifyIcon(this.components);
+            this.dgvexpiry = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookShopDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvexpiry)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -147,6 +153,22 @@ namespace BaarDanaTraderPOS
             this.panel1.TabIndex = 5;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnSuppliers
+            // 
+            this.btnSuppliers.BackColor = System.Drawing.Color.White;
+            this.btnSuppliers.FlatAppearance.BorderSize = 0;
+            this.btnSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSuppliers.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuppliers.ForeColor = System.Drawing.Color.DimGray;
+            this.btnSuppliers.Location = new System.Drawing.Point(25, 316);
+            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSuppliers.Name = "btnSuppliers";
+            this.btnSuppliers.Size = new System.Drawing.Size(200, 42);
+            this.btnSuppliers.TabIndex = 12;
+            this.btnSuppliers.Text = "Suppliers";
+            this.btnSuppliers.UseVisualStyleBackColor = false;
+            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
+            // 
             // btnUsers
             // 
             this.btnUsers.BackColor = System.Drawing.Color.White;
@@ -159,7 +181,7 @@ namespace BaarDanaTraderPOS
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(200, 47);
             this.btnUsers.TabIndex = 11;
-            this.btnUsers.Text = "Users";
+            this.btnUsers.Text = "Check Expiry";
             this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
@@ -367,21 +389,26 @@ namespace BaarDanaTraderPOS
             this.label7.TabIndex = 8;
             this.label7.Text = "DashBoard";
             // 
-            // btnSuppliers
+            // bookShopDataSet1
             // 
-            this.btnSuppliers.BackColor = System.Drawing.Color.White;
-            this.btnSuppliers.FlatAppearance.BorderSize = 0;
-            this.btnSuppliers.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnSuppliers.Font = new System.Drawing.Font("Microsoft YaHei", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuppliers.ForeColor = System.Drawing.Color.DimGray;
-            this.btnSuppliers.Location = new System.Drawing.Point(25, 316);
-            this.btnSuppliers.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSuppliers.Name = "btnSuppliers";
-            this.btnSuppliers.Size = new System.Drawing.Size(200, 42);
-            this.btnSuppliers.TabIndex = 12;
-            this.btnSuppliers.Text = "Suppliers";
-            this.btnSuppliers.UseVisualStyleBackColor = false;
-            this.btnSuppliers.Click += new System.EventHandler(this.btnSuppliers_Click);
+            this.bookShopDataSet1.DataSetName = "BookShopDataSet";
+            this.bookShopDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // alert
+            // 
+            this.alert.Text = "notifyIcon1";
+            this.alert.Visible = true;
+            this.alert.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // dgvexpiry
+            // 
+            this.dgvexpiry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvexpiry.Location = new System.Drawing.Point(1407, 633);
+            this.dgvexpiry.Name = "dgvexpiry";
+            this.dgvexpiry.RowHeadersWidth = 62;
+            this.dgvexpiry.RowTemplate.Height = 28;
+            this.dgvexpiry.Size = new System.Drawing.Size(10, 10);
+            this.dgvexpiry.TabIndex = 9;
             // 
             // Form1
             // 
@@ -389,6 +416,7 @@ namespace BaarDanaTraderPOS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1718, 954);
+            this.Controls.Add(this.dgvexpiry);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -408,6 +436,8 @@ namespace BaarDanaTraderPOS
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bookShopDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvexpiry)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,6 +468,9 @@ namespace BaarDanaTraderPOS
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnSuppliers;
+        private BookShopDataSet bookShopDataSet1;
+        private System.Windows.Forms.NotifyIcon alert;
+        private System.Windows.Forms.DataGridView dgvexpiry;
     }
 }
 

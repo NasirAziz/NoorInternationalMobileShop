@@ -124,6 +124,12 @@
     <Compile Include="Screens\CashInCashOut.Designer.cs">
       <DependentUpon>CashInCashOut.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\CheckExpiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\CheckExpiry.Designer.cs">
+      <DependentUpon>CheckExpiry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Comapany.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\CashInCashOut.resx">
       <DependentUpon>CashInCashOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\CheckExpiry.resx">
+      <DependentUpon>CheckExpiry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Comapany.resx">
       <DependentUpon>Comapany.cs</DependentUpon>

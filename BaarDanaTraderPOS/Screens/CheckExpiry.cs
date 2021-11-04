@@ -98,5 +98,11 @@ namespace BaarDanaTraderPOS.Screens
         {
 
         }
+
+        private void Expirygridview_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SalesReturn sr = new SalesReturn();
+
+        }
     }
 }

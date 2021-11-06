@@ -32,19 +32,28 @@ namespace BaarDanaTraderPOS.Screens
 
         private void btnItemAdd_Click(object sender, EventArgs e)
         {
+            dgvItems.DataSource = dtOrder;
+
             if (tbItemName.Text.Length != 0 && tbItemPrice.Text.Length != 0 && tbItemQuantity.Text.Length != 0)
             {
+                String barcode = tbBarCode.Text;
+                bool contains = dtOrder.AsEnumerable().Any(row => barcode == row.Field<String>("BarCode"));
+                if (contains)
+                {
+                    MessageBox.Show("Error! Item With SAME BARCODE already exists");
+                    return;
+                }
                 dtOrder.Rows.Add(
                     tbItemName.Text, 
                     tbItemPrice.Text, 
                     tbItemQuantity.Text, 
                     tbBarCode.Text, 
-                    DateOfExpiry.Value.Date, 
+                    DateOfExpiry.Value.Date.ToString("dd-MM-yyyy"), 
                     cbCompany.GetItemText(cbCompany.SelectedItem), 
                     tbPurchasePrice.Text, 
                     cbSupplier.GetItemText(cbSupplier.SelectedItem));
 
-                dgvItems.DataSource = dtOrder;
+               
                 CalculateTotalPrice();
 
                 
@@ -89,6 +98,7 @@ namespace BaarDanaTraderPOS.Screens
         private void UpdateItem(int id, String name, int price, int quantity)
         {
 
+            if (dgvItems.DataSource == Item) { 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
             cmd.CommandText = "UPDATE Add_item SET Name=@name, Price=@price, Quantity=@quantity, Purchase_price=@purchase WHERE Item_id=@id";
@@ -104,9 +114,33 @@ namespace BaarDanaTraderPOS.Screens
             if (r > 0)
             {
                 MessageBox.Show("Updated");
+                LoadItems();
+                Resettext();
+
+                }
+
             }
+            else
+            {
 
+                String barcode = tbBarCode.Text;
+                DataRow dr = dtOrder.Select($"BarCode={barcode}").FirstOrDefault(); // finds all rows with thta barcode and selects first or null if haven't found any
+                if (dr != null)
+                {
+                    dr["Name"] = tbItemName.Text; //changes the Product_name
+                    dr["Price"] = tbItemPrice.Text;
+                    dr["Quantity"] = tbItemQuantity.Text;
+                    dr["BarCode"] = barcode;
+                    dr["DateOfExpiry"] = DateOfExpiry.Value.Date.ToString("dd-MM-yyyy");
+                    dr["Company"] = cbCompany.GetItemText(cbCompany.SelectedItem) ;
+                    dr["Purchase_price"] = tbPurchasePrice.Text;
+                    dr["Supplier"] = cbSupplier.GetItemText(cbSupplier.SelectedItem) ;
 
+                    Resettext();
+
+                }
+
+            }
 
         }
         private void LoadItems()
@@ -155,8 +189,8 @@ namespace BaarDanaTraderPOS.Screens
             dtOrder.Columns.Add("Supplier");
 
             LoadItems();
-            LoadCompany();
             LoadSupplier();
+            LoadCompany();
 
         }
 
@@ -175,13 +209,31 @@ namespace BaarDanaTraderPOS.Screens
         }
         private void DeleteItem(int id)
         {
-            SqlCommand cmd = new SqlCommand();
-            cmd.Connection = con;
-            cmd.CommandText = "Delete from Add_item where Item_id=@id";
-            cmd.CommandType = CommandType.Text;
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-            //LoadItems();
+            if (dgvItems.DataSource == Item)
+            {
+                SqlCommand cmd = new SqlCommand();
+                cmd.Connection = con;
+                cmd.CommandText = "Delete from Add_item where Item_id=@id";
+                cmd.CommandType = CommandType.Text;
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+
+                LoadItems();
+                Resettext();
+            }
+            else
+            {
+
+                String barcode = tbBarCode.Text;
+                DataRow dr = dtOrder.Select($"BarCode={barcode}").FirstOrDefault(); // finds all rows with thta barcode and selects first or null if haven't found any
+                if (dr != null)
+                {
+                    dtOrder.Rows.Remove(dr);
+                    Resettext();
+
+                }
+
+            }
 
 
         }
@@ -215,8 +267,8 @@ namespace BaarDanaTraderPOS.Screens
         }
         public void LoadSupplier()
         {
-            try
-            {
+/*            try
+            {*/
                
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = con;
@@ -236,15 +288,15 @@ namespace BaarDanaTraderPOS.Screens
                 dtSupplier.Rows.InsertAt(row, 0);
                 cbSupplier.DataSource = dtSupplier;
                 cbSupplier.DisplayMember = "Name";
-                cbSupplier.ValueMember = "id";
+                //cbSupplier.ValueMember = "Supplier_ID";
 
                 
 
-            }
+/*            }
             catch (Exception)
             {
                 MessageBox.Show("Error Loading Suppliers");
-            }
+            }*/
 
         }
         private void btnItemUpdate_Click(object sender, EventArgs e)
@@ -255,7 +307,6 @@ namespace BaarDanaTraderPOS.Screens
                 price = Convert.ToInt32(tbItemPrice.Text);
                 quantity = Convert.ToInt32(tbItemQuantity.Text);
                 UpdateItem(id, name, price, quantity);
-                LoadItems();
                 Resettext();
 
 
@@ -279,7 +330,7 @@ namespace BaarDanaTraderPOS.Screens
         private void btnItemDelete_Click(object sender, EventArgs e)
         {
             DeleteItem(id);
-            LoadItems();
+            //LoadItems();
         }
 
         private void btnItemCancel_Click(object sender, EventArgs e)
@@ -356,13 +407,17 @@ namespace BaarDanaTraderPOS.Screens
                 quantity = Convert.ToInt32(dgvItems.CurrentRow.Cells[3].Value.ToString());
                 purchase = Convert.ToInt32(dgvItems.CurrentRow.Cells[6].Value.ToString());
                 barcode = dgvItems.CurrentRow.Cells[4].Value.ToString();
-                company = dgvItems.CurrentRow.Cells[5].Value.ToString();
+                company = dgvItems.CurrentRow.Cells[7].Value.ToString();
+                dateOfExpiry = dgvItems.CurrentRow.Cells[5].Value.ToString();
+
+                //MessageBox.Show(company);
                 tbItemName.Text = name;
                 tbItemPrice.Text = price.ToString();
                 tbItemQuantity.Text = quantity.ToString();
                 tbPurchasePrice.Text = purchase.ToString();
                 tbBarCode.Text = barcode;
                 cbCompany.SelectedIndex = cbCompany.Items.IndexOf(company);
+                DateOfExpiry.Value = DateTime.Parse(dateOfExpiry);
 
             }
             catch

@@ -149,7 +149,7 @@ namespace BaarDanaTraderPOS.Screens
             dtOrder.Columns.Add("Price", typeof(int));
             dtOrder.Columns.Add("Quantity", typeof(int));
             dtOrder.Columns.Add("BarCode");
-            dtOrder.Columns.Add("DateOfExpiry", typeof(DateTime));
+            dtOrder.Columns.Add("DateOfExpiry");
             dtOrder.Columns.Add("Company");
             dtOrder.Columns.Add("Purchase_price", typeof(int));
             dtOrder.Columns.Add("Supplier");

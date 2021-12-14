@@ -745,7 +745,7 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="ShopName">
+            <Textbox Name="Textbox3">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
@@ -754,7 +754,7 @@
                     <TextRun>
                       <Value>=Parameters!ShopName.Value</Value>
                       <Style>
-                        <FontSize>18pt</FontSize>
+                        <FontSize>20pt</FontSize>
                         <Color>White</Color>
                       </Style>
                     </TextRun>
@@ -762,11 +762,11 @@
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>ShopName</rd:DefaultName>
-              <Top>0.34078cm</Top>
-              <Left>6.44826cm</Left>
-              <Height>1.04069cm</Height>
-              <Width>12.79229cm</Width>
+              <rd:DefaultName>Textbox3</rd:DefaultName>
+              <Top>1.57524cm</Top>
+              <Left>7.17207cm</Left>
+              <Height>1.26146cm</Height>
+              <Width>13.13625cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
@@ -795,10 +795,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Phno</rd:DefaultName>
-              <Top>1.55787cm</Top>
-              <Left>6.44826cm</Left>
-              <Height>0.83812cm</Height>
-              <Width>12.79229cm</Width>
+              <Top>2.97781cm</Top>
+              <Left>7.17207cm</Left>
+              <Height>0.79401cm</Height>
+              <Width>13.13625cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -844,10 +844,9 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>0.38196in</Top>
-              <Left>3.25744in</Left>
+              <Top>0.45683in</Top>
               <Height>0.21527in</Height>
-              <Width>2.38593in</Width>
+              <Width>8.13082in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -871,14 +870,15 @@
                       </Style>
                     </TextRun>
                   </TextRuns>
-                  <Style />
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Footer</rd:DefaultName>
-              <Top>0.22907cm</Top>
-              <Left>8.2739cm</Left>
-              <Height>0.6cm</Height>
-              <Width>6.06026cm</Width>
+              <Top>0.03528cm</Top>
+              <Height>0.94868cm</Height>
+              <Width>20.65228cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>

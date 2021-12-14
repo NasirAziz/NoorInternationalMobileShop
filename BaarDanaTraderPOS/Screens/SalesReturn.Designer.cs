@@ -44,8 +44,8 @@ namespace BaarDanaTraderPOS.Screens
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(251, 289);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAdd.Location = new System.Drawing.Point(253, 320);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(71, 27);
             this.btnAdd.TabIndex = 7;
@@ -79,7 +79,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.tbQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbQuantity.Location = new System.Drawing.Point(179, 151);
-            this.tbQuantity.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.tbQuantity.Name = "tbQuantity";
             this.tbQuantity.Size = new System.Drawing.Size(145, 23);
             this.tbQuantity.TabIndex = 11;
@@ -109,7 +109,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.tbPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPrice.Location = new System.Drawing.Point(179, 187);
-            this.tbPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPrice.Margin = new System.Windows.Forms.Padding(2);
             this.tbPrice.Name = "tbPrice";
             this.tbPrice.ReadOnly = true;
             this.tbPrice.Size = new System.Drawing.Size(145, 23);
@@ -130,7 +130,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.tbTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbTotal.Location = new System.Drawing.Point(179, 229);
-            this.tbTotal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbTotal.Margin = new System.Windows.Forms.Padding(2);
             this.tbTotal.Name = "tbTotal";
             this.tbTotal.ReadOnly = true;
             this.tbTotal.Size = new System.Drawing.Size(145, 23);
@@ -138,8 +138,8 @@ namespace BaarDanaTraderPOS.Screens
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(46, 289);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(46, 320);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(71, 27);
             this.button1.TabIndex = 19;
@@ -151,7 +151,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.tbProductName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbProductName.Location = new System.Drawing.Point(179, 118);
-            this.tbProductName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbProductName.Margin = new System.Windows.Forms.Padding(2);
             this.tbProductName.Name = "tbProductName";
             this.tbProductName.ReadOnly = true;
             this.tbProductName.Size = new System.Drawing.Size(145, 23);

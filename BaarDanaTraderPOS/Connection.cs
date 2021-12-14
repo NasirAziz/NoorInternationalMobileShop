@@ -8,7 +8,8 @@ namespace BaarDanaTraderPOS
 {
     class Connection
     {
-        public static String c = @"Data Source=APPLE40A5\SQLEXPRESS;Initial Catalog=BookShop;Integrated Security=True";
-        //ENIGMA\SQLEXPRESS
+        public static String c = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\database\BaarDanaTraders.mdf;Integrated Security=True;Connect Timeout=30";
+        //ENIGMA\
+        //Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\DataBase\BaarDanaTraders.mdf;Integrated Security=True;Connect Timeout=30"
     }
 }

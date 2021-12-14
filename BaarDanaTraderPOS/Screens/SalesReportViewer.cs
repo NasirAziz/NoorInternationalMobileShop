@@ -23,14 +23,14 @@ namespace BaarDanaTraderPOS.Screens
 
         private void SalesReportViewer_Load(object sender, EventArgs e)
         {
-            SettingsLoader();
+            //SettingsLoader();
             ReportParameterCollection reportParameters = new ReportParameterCollection();
             this.reportViewer1.RefreshReport();
             reportParameters.Add(new ReportParameter("ShopName", Shop_name));
             reportParameters.Add(new ReportParameter("Footer", footer));
             reportParameters.Add(new ReportParameter("Phno", Phno));
         }
-        public void SettingsLoader()
+       /* public void SettingsLoader()
         {
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -40,6 +40,6 @@ namespace BaarDanaTraderPOS.Screens
             Phno = (String)cmd.ExecuteScalar();
             cmd.CommandText = "select Footer from Settings";
             footer = (String)cmd.ExecuteScalar();
-        }
+        }*/
     }
 }

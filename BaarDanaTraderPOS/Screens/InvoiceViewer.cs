@@ -21,6 +21,7 @@ namespace BaarDanaTraderPOS.Screens
         {
             InitializeComponent();
         }
+
         public void SettingsLoader()
         {
             SqlCommand cmd = new SqlCommand();
@@ -32,6 +33,7 @@ namespace BaarDanaTraderPOS.Screens
             cmd.CommandText = "select Footer from Settings";
             footer = (String)cmd.ExecuteScalar();
         }
+
         private void InvoiceViewer_Load(object sender, EventArgs e)
         {
             this.reportViewer1.RefreshReport();

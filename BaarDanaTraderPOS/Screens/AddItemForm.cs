@@ -36,13 +36,13 @@ namespace BaarDanaTraderPOS.Screens
 
             if (tbItemName.Text.Length != 0 && tbItemPrice.Text.Length != 0 && tbItemQuantity.Text.Length != 0)
             {
-                String barcode = tbBarCode.Text;
+                /*String barcode = tbBarCode.Text;
                 bool contains = dtOrder.AsEnumerable().Any(row => barcode == row.Field<String>("BarCode"));
                 if (contains)
                 {
                     MessageBox.Show("Error! Item With SAME BARCODE already exists");
                     return;
-                }
+                }*/
                 dtOrder.Rows.Add(
                     tbItemName.Text, 
                     tbItemPrice.Text, 
@@ -349,6 +349,8 @@ namespace BaarDanaTraderPOS.Screens
         {
             AddItemFinishForm f = new AddItemFinishForm();
             f.Show();
+            LoadItems();
+
         }
 
         private void cbSupplier_SelectedValueChanged(object sender, EventArgs e)
@@ -399,14 +401,13 @@ namespace BaarDanaTraderPOS.Screens
         private void dgvItems_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            try
-            {
+            if (dgvItems.DataSource == Item) { 
                 id = Convert.ToInt32(dgvItems.CurrentRow.Cells[0].Value.ToString());
                 name = dgvItems.CurrentRow.Cells[1].Value.ToString();
-                price = Convert.ToInt32(dgvItems.CurrentRow.Cells[2].Value.ToString());
-                quantity = Convert.ToInt32(dgvItems.CurrentRow.Cells[3].Value.ToString());
-                purchase = Convert.ToInt32(dgvItems.CurrentRow.Cells[6].Value.ToString());
-                barcode = dgvItems.CurrentRow.Cells[4].Value.ToString();
+                price = Convert.ToInt32(dgvItems.CurrentRow.Cells[3].Value.ToString());
+                quantity = Convert.ToInt32(dgvItems.CurrentRow.Cells[4].Value.ToString());
+                purchase = Convert.ToInt32(dgvItems.CurrentRow.Cells[2].Value.ToString());
+                barcode = dgvItems.CurrentRow.Cells[6].Value.ToString();
                 company = dgvItems.CurrentRow.Cells[7].Value.ToString();
                 dateOfExpiry = dgvItems.CurrentRow.Cells[5].Value.ToString();
 
@@ -417,17 +418,23 @@ namespace BaarDanaTraderPOS.Screens
                 tbPurchasePrice.Text = purchase.ToString();
                 tbBarCode.Text = barcode;
                 cbCompany.SelectedIndex = cbCompany.Items.IndexOf(company);
-                DateOfExpiry.Value = DateTime.Parse(dateOfExpiry);
+              //  DateOfExpiry.Value = DateTime.Parse(dateOfExpiry);
 
             }
-            catch
+            else
             {
                // id = Convert.ToInt32(dgvItems.CurrentRow.Cells[0].Value.ToString());
+              /* for (int i = 0; i <= 7; i++)
+                {
+                    MessageBox.Show( dgvItems.CurrentRow.Cells[i].Value.ToString());
+                }*/
                 name = dgvItems.CurrentRow.Cells[0].Value.ToString();
                 price = Convert.ToInt32(dgvItems.CurrentRow.Cells[1].Value.ToString());
 
                 purchase = Convert.ToInt32(dgvItems.CurrentRow.Cells[6].Value.ToString());
+               
                 quantity = Convert.ToInt32(dgvItems.CurrentRow.Cells[2].Value.ToString());
+                
                 barcode = dgvItems.CurrentRow.Cells[3].Value.ToString();
                 dateOfExpiry =  dgvItems.CurrentRow.Cells[4].Value.ToString();
                 company = dgvItems.CurrentRow.Cells[5].Value.ToString();

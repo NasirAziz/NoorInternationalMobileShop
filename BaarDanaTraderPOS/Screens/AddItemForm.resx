@@ -445,7 +445,7 @@
     <value>62</value>
   </data>
   <data name="dgvItems.Size" type="System.Drawing.Size, System.Drawing">
-    <value>605, 316</value>
+    <value>667, 316</value>
   </data>
   <data name="dgvItems.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -475,7 +475,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="tbAISearch.Size" type="System.Drawing.Size, System.Drawing">
-    <value>410, 23</value>
+    <value>419, 23</value>
   </data>
   <data name="tbAISearch.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -538,7 +538,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAISearch.Location" type="System.Drawing.Point, System.Drawing">
-    <value>909, 106</value>
+    <value>907, 106</value>
   </data>
   <data name="btnAISearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -574,13 +574,13 @@
     <value>NoControl</value>
   </data>
   <data name="btnShowAll.Location" type="System.Drawing.Point, System.Drawing">
-    <value>973, 106</value>
+    <value>971, 106</value>
   </data>
   <data name="btnShowAll.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
   </data>
   <data name="btnShowAll.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 23</value>
+    <value>62, 23</value>
   </data>
   <data name="btnShowAll.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -1042,7 +1042,7 @@
     <value>6, 13</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>975, 502</value>
+    <value>1044, 502</value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>1, 1, 1, 1</value>

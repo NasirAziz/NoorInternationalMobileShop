@@ -48,20 +48,27 @@ namespace BaarDanaTraderPOS.Screens
             this.tbPaidAmount = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.lblChange = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblFinal = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.cbCustomername = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tbProductName = new System.Windows.Forms.TextBox();
+            this.dgvProduct = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(23, 34);
+            this.label6.Location = new System.Drawing.Point(442, 36);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 20);
@@ -78,7 +85,7 @@ namespace BaarDanaTraderPOS.Screens
             this.dgvOrderItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOrderItems.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.dgvOrderItems.Location = new System.Drawing.Point(413, 110);
-            this.dgvOrderItems.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvOrderItems.Margin = new System.Windows.Forms.Padding(2);
             this.dgvOrderItems.Name = "dgvOrderItems";
             this.dgvOrderItems.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvOrderItems.RowHeadersWidth = 62;
@@ -96,10 +103,10 @@ namespace BaarDanaTraderPOS.Screens
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(150, 34);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(589, 31);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(386, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(182, 26);
             this.dateTimePicker1.TabIndex = 12;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -111,7 +118,7 @@ namespace BaarDanaTraderPOS.Screens
             this.btnCOConfirm.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCOConfirm.ForeColor = System.Drawing.Color.White;
             this.btnCOConfirm.Location = new System.Drawing.Point(3524, 374);
-            this.btnCOConfirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCOConfirm.Margin = new System.Windows.Forms.Padding(2);
             this.btnCOConfirm.Name = "btnCOConfirm";
             this.btnCOConfirm.Size = new System.Drawing.Size(124, 78);
             this.btnCOConfirm.TabIndex = 16;
@@ -162,7 +169,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.panel1.Controls.Add(this.label8);
             this.panel1.Location = new System.Drawing.Point(25, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(311, 78);
             this.panel1.TabIndex = 20;
@@ -170,15 +177,17 @@ namespace BaarDanaTraderPOS.Screens
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dgvProduct);
+            this.panel2.Controls.Add(this.tbProductName);
             this.panel2.Controls.Add(this.btnCORemoveProduct);
             this.panel2.Controls.Add(this.btnCOAddProduct);
             this.panel2.Controls.Add(this.btnCOCancel);
             this.panel2.Controls.Add(this.tbOrderProductID);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(25, 110);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(311, 247);
+            this.panel2.Size = new System.Drawing.Size(334, 391);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -188,8 +197,8 @@ namespace BaarDanaTraderPOS.Screens
             this.btnCORemoveProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCORemoveProduct.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCORemoveProduct.ForeColor = System.Drawing.Color.White;
-            this.btnCORemoveProduct.Location = new System.Drawing.Point(113, 120);
-            this.btnCORemoveProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCORemoveProduct.Location = new System.Drawing.Point(119, 322);
+            this.btnCORemoveProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnCORemoveProduct.Name = "btnCORemoveProduct";
             this.btnCORemoveProduct.Size = new System.Drawing.Size(80, 52);
             this.btnCORemoveProduct.TabIndex = 26;
@@ -203,8 +212,8 @@ namespace BaarDanaTraderPOS.Screens
             this.btnCOAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCOAddProduct.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCOAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnCOAddProduct.Location = new System.Drawing.Point(211, 120);
-            this.btnCOAddProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCOAddProduct.Location = new System.Drawing.Point(214, 322);
+            this.btnCOAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnCOAddProduct.Name = "btnCOAddProduct";
             this.btnCOAddProduct.Size = new System.Drawing.Size(80, 52);
             this.btnCOAddProduct.TabIndex = 5;
@@ -217,8 +226,8 @@ namespace BaarDanaTraderPOS.Screens
             this.btnCOCancel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCOCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCOCancel.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCOCancel.Location = new System.Drawing.Point(13, 120);
-            this.btnCOCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCOCancel.Location = new System.Drawing.Point(26, 322);
+            this.btnCOCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCOCancel.Name = "btnCOCancel";
             this.btnCOCancel.Size = new System.Drawing.Size(80, 52);
             this.btnCOCancel.TabIndex = 24;
@@ -230,7 +239,7 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.tbOrderProductID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbOrderProductID.Location = new System.Drawing.Point(154, 21);
-            this.tbOrderProductID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbOrderProductID.Margin = new System.Windows.Forms.Padding(2);
             this.tbOrderProductID.MaxLength = 0;
             this.tbOrderProductID.Name = "tbOrderProductID";
             this.tbOrderProductID.Size = new System.Drawing.Size(140, 22);
@@ -251,10 +260,12 @@ namespace BaarDanaTraderPOS.Screens
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.cbCustomername);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Location = new System.Drawing.Point(413, 20);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(796, 73);
             this.panel3.TabIndex = 21;
@@ -268,7 +279,7 @@ namespace BaarDanaTraderPOS.Screens
             this.btn_Confirm.Font = new System.Drawing.Font("Microsoft Tai Le", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Confirm.ForeColor = System.Drawing.Color.White;
             this.btn_Confirm.Location = new System.Drawing.Point(895, 439);
-            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Confirm.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Confirm.Name = "btn_Confirm";
             this.btn_Confirm.Size = new System.Drawing.Size(289, 38);
             this.btn_Confirm.TabIndex = 27;
@@ -281,7 +292,7 @@ namespace BaarDanaTraderPOS.Screens
             this.tbPaidAmount.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.tbPaidAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPaidAmount.Location = new System.Drawing.Point(1019, 385);
-            this.tbPaidAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPaidAmount.Margin = new System.Windows.Forms.Padding(2);
             this.tbPaidAmount.MaxLength = 0;
             this.tbPaidAmount.Name = "tbPaidAmount";
             this.tbPaidAmount.Size = new System.Drawing.Size(166, 29);
@@ -303,38 +314,103 @@ namespace BaarDanaTraderPOS.Screens
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.panel4.Controls.Add(this.lblChange);
-            this.panel4.Controls.Add(this.label14);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.lblFinal);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.lblBalance);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.lblGrandTotal);
             this.panel4.Location = new System.Drawing.Point(590, 376);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(291, 109);
+            this.panel4.Size = new System.Drawing.Size(297, 125);
             this.panel4.TabIndex = 30;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // lblChange
+            // label3
             // 
-            this.lblChange.AutoSize = true;
-            this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChange.ForeColor = System.Drawing.Color.Red;
-            this.lblChange.Location = new System.Drawing.Point(171, 64);
-            this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(20, 24);
-            this.lblChange.TabIndex = 35;
-            this.lblChange.Text = "0";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 86);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(51, 24);
+            this.label3.TabIndex = 37;
+            this.label3.Text = "Final";
             // 
-            // label14
+            // lblFinal
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(2, 64);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(82, 24);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Change:";
+            this.lblFinal.AutoSize = true;
+            this.lblFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinal.ForeColor = System.Drawing.Color.Red;
+            this.lblFinal.Location = new System.Drawing.Point(172, 86);
+            this.lblFinal.Name = "lblFinal";
+            this.lblFinal.Size = new System.Drawing.Size(20, 24);
+            this.lblFinal.TabIndex = 35;
+            this.lblFinal.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(2, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 24);
+            this.label2.TabIndex = 36;
+            this.label2.Text = "Balance";
+            // 
+            // lblBalance
+            // 
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalance.ForeColor = System.Drawing.Color.Red;
+            this.lblBalance.Location = new System.Drawing.Point(172, 52);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(20, 24);
+            this.lblBalance.TabIndex = 33;
+            this.lblBalance.Text = "0";
+            this.lblBalance.Click += new System.EventHandler(this.lblBalance_Click);
+            // 
+            // cbCustomername
+            // 
+            this.cbCustomername.FormattingEnabled = true;
+            this.cbCustomername.Location = new System.Drawing.Point(150, 35);
+            this.cbCustomername.Name = "cbCustomername";
+            this.cbCustomername.Size = new System.Drawing.Size(239, 21);
+            this.cbCustomername.TabIndex = 31;
+            this.cbCustomername.SelectedValueChanged += new System.EventHandler(this.cbCustomername_SelectedValueChanged_1);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Location = new System.Drawing.Point(2, 33);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(124, 20);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Customer Name";
+            // 
+            // tbProductName
+            // 
+            this.tbProductName.Location = new System.Drawing.Point(26, 78);
+            this.tbProductName.Name = "tbProductName";
+            this.tbProductName.Size = new System.Drawing.Size(285, 20);
+            this.tbProductName.TabIndex = 27;
+            this.tbProductName.TextChanged += new System.EventHandler(this.tbProductName_TextChanged);
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvProduct.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Location = new System.Drawing.Point(14, 115);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.Size = new System.Drawing.Size(297, 189);
+            this.dgvProduct.TabIndex = 28;
+            this.dgvProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellClick);
+            this.dgvProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentClick);
             // 
             // CreateOrderForm
             // 
@@ -342,7 +418,7 @@ namespace BaarDanaTraderPOS.Screens
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(1212, 487);
+            this.ClientSize = new System.Drawing.Size(1212, 582);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -352,7 +428,7 @@ namespace BaarDanaTraderPOS.Screens
             this.Controls.Add(this.dgvOrderItems);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbPaidAmount);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MinimumSize = new System.Drawing.Size(913, 442);
             this.Name = "CreateOrderForm";
             this.Text = "CreateOrderForm";
@@ -368,6 +444,7 @@ namespace BaarDanaTraderPOS.Screens
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -393,7 +470,13 @@ namespace BaarDanaTraderPOS.Screens
         private System.Windows.Forms.TextBox tbPaidAmount;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label lblChange;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox cbCustomername;
+        private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblFinal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridView dgvProduct;
+        private System.Windows.Forms.TextBox tbProductName;
+        private System.Windows.Forms.Label label4;
     }
 }

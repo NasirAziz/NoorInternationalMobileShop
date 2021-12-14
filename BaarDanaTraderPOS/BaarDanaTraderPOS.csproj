@@ -95,10 +95,32 @@
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Database\ProductClass.cs" />
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Product Key.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product Key.Designer.cs">
+      <DependentUpon>Product Key.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\AddCustomerForm.cs">
       <SubType>Form</SubType>
@@ -117,6 +139,12 @@
     </Compile>
     <Compile Include="Screens\AddItemForm.Designer.cs">
       <DependentUpon>AddItemForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\AddRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\AddRecovery.Designer.cs">
+      <DependentUpon>AddRecovery.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\CashInCashOut.cs">
       <SubType>Form</SubType>
@@ -162,11 +190,29 @@
     <Compile Include="Screens\InvoiceViewer.Designer.cs">
       <DependentUpon>InvoiceViewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\LedgerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LedgerReport.Designer.cs">
+      <DependentUpon>LedgerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LedgerReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\LedgerReportViewer.Designer.cs">
+      <DependentUpon>LedgerReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\OtherIncome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Screens\OtherIncome.Designer.cs">
       <DependentUpon>OtherIncome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\pu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\pu.Designer.cs">
+      <DependentUpon>pu.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\SalesReportViewer.cs">
       <SubType>Form</SubType>
@@ -191,6 +237,24 @@
     </Compile>
     <Compile Include="Screens\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Signin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Signin.Designer.cs">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\StockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\StockReport.Designer.cs">
+      <DependentUpon>StockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\StockReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\StockReportViewer.Designer.cs">
+      <DependentUpon>StockReportViewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\SuppliersForm.cs">
       <SubType>Form</SubType>
@@ -217,11 +281,17 @@
       <DependentUpon>ViewHistoryReport.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Product Key.resx">
+      <DependentUpon>Product Key.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\AddItemFinishForm.resx">
       <DependentUpon>AddItemFinishForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\AddItemForm.ur-PK.resx">
       <DependentUpon>AddItemForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\AddRecovery.resx">
+      <DependentUpon>AddRecovery.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\CashInCashOut.resx">
       <DependentUpon>CashInCashOut.cs</DependentUpon>
@@ -235,10 +305,20 @@
     <EmbeddedResource Include="Screens\Expenses.resx">
       <DependentUpon>Expenses.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LedgerReport.resx">
+      <DependentUpon>LedgerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\LedgerReportViewer.resx">
+      <DependentUpon>LedgerReportViewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\OtherIncome.resx">
       <DependentUpon>OtherIncome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\pu.resx">
+      <DependentUpon>pu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Report1.rdlc" />
+    <EmbeddedResource Include="Screens\Report2.rdlc" />
     <EmbeddedResource Include="Screens\SalesReportViewer.resx">
       <DependentUpon>SalesReportViewer.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +330,16 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Signin.resx">
+      <DependentUpon>Signin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Stocklist.rdlc" />
+    <EmbeddedResource Include="Screens\StockReport.resx">
+      <DependentUpon>StockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\StockReportViewer.resx">
+      <DependentUpon>StockReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\SuppliersForm.resx">
       <DependentUpon>SuppliersForm.cs</DependentUpon>
@@ -313,6 +403,28 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsc">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet3.xss">
+      <DependentUpon>DataSet3.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="packages.config" />
